@@ -74,13 +74,11 @@ public class Main {
     }
     public static void findingDoubledSymbol(String str, char[] array){
         for (int i = 0; i < array.length; i++){
-            for (int j = i + 1; j < array.length; j++){
-                if (array[i]==array[j]){
+                if (array[i]==array[i+1]){
                     char doubledSymbol = array[i];
                     System.out.println("Найден повторяющийся элемент " + doubledSymbol + ".");
-                }
+                    break;
             }
-            break;
         }
     }
 
@@ -89,7 +87,7 @@ public class Main {
         printIsLeapYear(1400);
         printVersionOfProgram(1, 2020);
         printDaysOfDelivery(51);
-        printDoubledLetters("aabc");
+        printDoubledLetters("abbbbcc");
     }
 
 }
